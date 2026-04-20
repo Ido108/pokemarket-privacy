@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokeMarket — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #141822;
+    --ink: #e9edf3;
+    --ink-dim: #9aa3b2;
+    --accent: #f5c04a;
+    --accent-soft: rgba(245, 192, 74, 0.12);
+    --line: rgba(255, 255, 255, 0.08);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background:
+      radial-gradient(1200px 500px at 50% -100px, rgba(245, 192, 74, 0.08), transparent 60%),
+      radial-gradient(800px 400px at 90% 100%, rgba(91, 138, 255, 0.06), transparent 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px 28px 80px;
+  }
+  header.hero {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .brand-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 22px 0 8px;
+    font-weight: 700;
+  }
+  .updated {
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 44px 0 14px;
+    padding-top: 4px;
+    border-top: 1px solid var(--line);
+    padding-top: 30px;
+    font-weight: 600;
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 24px; }
+  p, li { color: var(--ink); }
+  p { margin: 12px 0; }
+  ul { padding-left: 22px; margin: 12px 0; }
+  li { margin: 8px 0; }
+  strong { color: var(--ink); font-weight: 600; }
+  code {
+    font-family: "SF Mono", Monaco, Menlo, Consolas, monospace;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--accent);
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(245, 192, 74, 0.4);
+  }
+  a:hover { border-bottom-style: solid; }
+  .summary {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 50px 0 0;
+  }
+  .summary h3 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .summary p {
+    margin: 0;
+    color: var(--ink);
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 36px 20px 60px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 19px; margin-top: 36px; padding-top: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="brand"><span class="brand-dot"></span>PokeMarket Extension</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: April 20, 2026</p>
+</header>
+
+<p>PokeMarket ("the extension", "we", "our") is a browser extension that identifies Pokemon Trading Card Game products on shopping sites and displays market prices from PriceCharting. This policy explains exactly what data the extension reads, where it is sent, and what we do <strong>not</strong> collect.</p>
+
+<h2>1. Data the extension reads from the pages you visit</h2>
+<p>When the extension is active, its content script passively scans the DOM of the page you are currently viewing for Pokemon TCG product listings. From each matched listing it reads:</p>
+<ul>
+  <li><strong>Product title</strong> — the text of the listing.</li>
+  <li><strong>Product URL</strong> — the link to the listing on the retailer's site.</li>
+  <li><strong>Product image URL</strong> — the URL of the product image (the image itself is not downloaded by the extension).</li>
+  <li><strong>Displayed price text</strong> — the price string shown on the listing, used to render the store price next to our matched market value.</li>
+</ul>
+<p>The extension does <strong>not</strong> read any other page content (articles, comments, form inputs, cookies, session tokens, payment fields, account info). If the page has no Pokemon TCG product listing the extension does nothing and sends no request.</p>
+
+<h2>2. What is sent to our backend</h2>
+<p>The four fields above are sent to our backend (hosted on Railway at <code>tcg-extension-production.up.railway.app</code>) over HTTPS for the sole purpose of identifying the matching Pokemon TCG product in our database and returning:</p>
+<ul>
+  <li>The matched product's PriceCharting market price.</li>
+  <li>The product image reference.</li>
+  <li>A summary of the top cards in the matched set.</li>
+</ul>
+<p>The backend logs lookup requests (title + URL) for diagnostics and to improve match accuracy. These logs are not joined with any identifying information.</p>
+
+<h2>3. Data sent when you use "Edit Match" (user corrections)</h2>
+<p>If you open a product's tooltip and use the <strong>Edit Match</strong> feature to correct a wrong match, the extension sends the following to our backend:</p>
+<ul>
+  <li>The listing title you are correcting.</li>
+  <li>The product you selected as the correct match (product ID + PriceCharting URL).</li>
+  <li>The source URL of the listing.</li>
+</ul>
+<p>Corrections are reviewed by us and may be approved as a permanent override so that every user sees the correct match for that listing in the future. No other information about you is collected with a correction.</p>
+
+<h2>4. What is stored locally on your device</h2>
+<p>The extension uses <code>chrome.storage.local</code> to store:</p>
+<ul>
+  <li>A cache of lookup results (4-hour TTL) so repeated hovers don't re-query the backend.</li>
+  <li>A cache of approved manual overrides.</li>
+  <li>Your preferences: overlay ON/OFF toggle, default grade view (Ungraded / PSA 10), and the last-seen "overrides epoch" value used for cache invalidation.</li>
+</ul>
+<p>All of this data stays on your device. The extension does not use <code>chrome.storage.sync</code>, so nothing is synced to your Google account.</p>
+
+<h2>5. What we do NOT collect</h2>
+<p>We do <strong>not</strong> collect or transmit:</p>
+<ul>
+  <li>Personally identifiable information (name, email, address, phone).</li>
+  <li>Health, financial, or payment information.</li>
+  <li>Authentication data (passwords, cookies, session tokens, OAuth tokens).</li>
+  <li>Personal communications (emails, chats, DMs).</li>
+  <li>Location (GPS, IP geolocation, timezone).</li>
+  <li>Browsing history or the list of sites you visit.</li>
+  <li>Keystrokes, clicks outside the extension's own UI, mouse position, or scroll events.</li>
+</ul>
+<p>The extension only reads the minimum page content required to identify a Pokemon TCG product listing.</p>
+
+<h2>6. Third parties</h2>
+<p>The extension communicates <strong>only</strong> with:</p>
+<ul>
+  <li><strong>Our backend</strong> (<code>tcg-extension-production.up.railway.app</code>) — for price lookups and corrections.</li>
+  <li><strong>PriceCharting image CDN</strong> — the browser loads product images by URL. This is a standard <code>&lt;img src&gt;</code> request; no data beyond a standard browser request is sent.</li>
+</ul>
+<p>We do <strong>not</strong>:</p>
+<ul>
+  <li>Sell or share user data with third parties.</li>
+  <li>Use user data for advertising, profiling, or analytics tracking.</li>
+  <li>Use user data to determine creditworthiness or for lending purposes.</li>
+</ul>
+
+<h2>7. Data retention</h2>
+<ul>
+  <li><strong>Local cache on your device</strong> — expires automatically (4 hours for lookups). You can clear it at any time from the extension popup via the <strong>Clear Cache</strong> button, or by uninstalling the extension.</li>
+  <li><strong>Backend lookup logs</strong> — retained for up to 90 days for match-quality diagnostics, then deleted.</li>
+  <li><strong>Approved manual overrides</strong> — retained indefinitely as they are part of the shared correction database benefiting all users. No listing text in overrides is tied to an individual user.</li>
+</ul>
+
+<h2>8. Children's privacy</h2>
+<p>The extension is not directed at children under 13 and does not knowingly collect information from them.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If we make material changes to this policy we will update the "Last updated" date at the top and, where appropriate, notify users through the extension popup or release notes. Continued use of the extension after an update constitutes acceptance of the revised policy.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this policy or about data handled by the extension:</p>
+<ul>
+  <li>Email: <a href="mailto:ido108@gmail.com">ido108@gmail.com</a></li>
+  <li>Issue tracker / source inquiries: via the Chrome Web Store listing support link.</li>
+</ul>
+
+<div class="summary">
+  <h3>Summary</h3>
+  <p>PokeMarket reads only the product title, URL, image URL, and price from shopping pages, sends them to our backend to fetch a PriceCharting match, and stores cached results locally on your device. We do not collect personal information, do not track browsing history, and do not share data with third parties.</p>
+</div>
+
+<footer>
+  &copy; 2026 PokeMarket Extension — Privacy Policy
+</footer>
+
+</div>
+</body>
+</html>
