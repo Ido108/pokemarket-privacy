@@ -158,7 +158,7 @@
 <p>The extension does <strong>not</strong> read any other page content (articles, comments, form inputs, cookies, session tokens, payment fields, account info). If the page has no Pokemon TCG product listing the extension does nothing and sends no request.</p>
 
 <h2>2. What is sent to our backend</h2>
-<p>The four fields above are sent to our backend (hosted on Railway at <code>tcg-extension-production.up.railway.app</code>) over HTTPS for the sole purpose of identifying the matching Pokemon TCG product in our database and returning:</p>
+<p>The four fields above are sent to our backend over HTTPS for the sole purpose of identifying the matching Pokemon TCG product in our database and returning:</p>
 <ul>
   <li>The matched product's PriceCharting market price.</li>
   <li>The product image reference.</li>
@@ -200,7 +200,7 @@
 <h2>6. Third parties</h2>
 <p>The extension communicates <strong>only</strong> with:</p>
 <ul>
-  <li><strong>Our backend</strong> (<code>tcg-extension-production.up.railway.app</code>) — for price lookups and corrections.</li>
+  <li><strong>Our backend</strong> — for price lookups and corrections.</li>
   <li><strong>PriceCharting image CDN</strong> — the browser loads product images by URL. This is a standard <code>&lt;img src&gt;</code> request; no data beyond a standard browser request is sent.</li>
 </ul>
 <p>We do <strong>not</strong>:</p>
