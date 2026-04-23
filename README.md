@@ -1,7 +1,16 @@
-# PokeMarket — Privacy Policy
+# PokeMarkt — Website
 
-Public privacy policy page for the **PokeMarket** Chrome/Firefox extension, served via GitHub Pages.
+Public website for the **PokeMarkt** Chrome/Firefox extension, served via GitHub Pages on a custom domain.
 
-**Live URL:** https://ido108.github.io/pokemarket-privacy/
+- **Landing page:** https://pokemarkt.com/ (`index.html`)
+- **Privacy policy:** https://pokemarkt.com/privacy (`privacy/index.html`)
 
-The policy is a single static `index.html` (no build step, no JavaScript). Edit the file, commit, push — GitHub Pages rebuilds in about a minute.
+Static site, no build step. Edit → commit → push → GitHub Pages rebuilds in about a minute.
+
+## Layout
+
+```
+/                 landing page (index.html, styles.css, app.js, assets/, uploads/)
+/privacy/         privacy policy page
+/CNAME            pokemarkt.com (GitHub Pages custom domain)
+```
