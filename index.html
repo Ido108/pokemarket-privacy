@@ -593,148 +593,167 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   margin-top: 2px;
 }
 
-/* Shared button polish: glassy highlight strip + shine sweep on hover */
+/* ==========================================================
+   Buttons — matte, icon-chip, italic display type (no XP gloss)
+   ========================================================== */
+@property --btn-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes btn-ring-spin { to { --btn-angle: 360deg; } }
+
 .btn--primary,
 .btn--ghost {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border: 1px solid transparent;
-  background-clip: padding-box;
   color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.005em;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.35), 0 0 18px rgba(0,0,0,0.15);
+  font-family: var(--display);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: none;
   transition:
-    transform .45s cubic-bezier(.2,.8,.2,1),
-    box-shadow .45s cubic-bezier(.2,.8,.2,1),
-    filter .3s ease;
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s cubic-bezier(.2,.8,.2,1),
+    filter .25s ease;
 }
-/* Glossy top highlight strip */
+.btn--primary.btn--sm, .btn--ghost.btn--sm { font-size: 13px; letter-spacing: 0.04em; }
+.btn--primary.btn--lg, .btn--ghost.btn--lg { font-size: 18px; padding-left: 18px; }
+
+/* Fine grain / noise overlay — kills the shiny plastic look */
 .btn--primary::before,
 .btn--ghost::before {
   content: "";
-  position: absolute;
-  inset: 1px 1px auto 1px;
-  height: 52%;
+  position: absolute; inset: 0;
   border-radius: inherit;
-  background:
-    linear-gradient(180deg,
-      rgba(255,255,255,0.42) 0%,
-      rgba(255,255,255,0.12) 55%,
-      rgba(255,255,255,0) 100%);
-  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.7 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+  opacity: 0.28;
   pointer-events: none;
   z-index: 0;
 }
-/* Shine sweep */
+
+/* Animated conic gradient ring — appears on hover, rotates slowly */
 .btn--primary::after,
 .btn--ghost::after {
   content: "";
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   border-radius: inherit;
-  background: linear-gradient(
-    115deg,
-    transparent 28%,
-    rgba(255,255,255,0.35) 48%,
-    rgba(255,255,255,0.08) 55%,
-    transparent 72%);
-  transform: translateX(-120%) skewX(-12deg);
-  transition: transform 1.05s cubic-bezier(.2,.8,.2,1);
+  padding: 1.25px;
+  background: conic-gradient(
+    from var(--btn-angle, 0deg),
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.04) 22%,
+    rgba(255,255,255,0.55) 48%,
+    rgba(255,255,255,0.04) 74%,
+    rgba(255,255,255,0.95));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.22;
   pointer-events: none;
-  z-index: 0;
+  z-index: 3;
+  transition: opacity .4s ease;
 }
 .btn--primary:hover::after,
-.btn--ghost:hover::after { transform: translateX(120%) skewX(-12deg); }
-/* Keep the label + logo above the gloss layers */
+.btn--ghost:hover::after {
+  opacity: 0.85;
+  animation: btn-ring-spin 3.2s linear infinite;
+}
+
 .btn--primary > *,
 .btn--ghost > * { position: relative; z-index: 1; }
 
+/* Icon chip — browser logo sits in a dark inset badge, not floating */
 .btn--primary .btn__browser-logo,
 .btn--ghost .btn__browser-logo {
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
-  transition: transform .5s cubic-bezier(.2,.8,.2,1);
-}
-.btn--primary:hover .btn__browser-logo,
-.btn--ghost:hover .btn__browser-logo { transform: rotate(-8deg) scale(1.08); }
-
-/* ---------- Chrome — aurora sky blue (תכלת) ---------- */
-.btn--primary {
-  background:
-    radial-gradient(140% 85% at 50% -20%, rgba(255,255,255,0.35) 0%, transparent 55%),
-    radial-gradient(120% 120% at 100% 120%, rgba(6, 60, 140, 0.55) 0%, transparent 60%),
-    linear-gradient(135deg, #5BC5FF 0%, #1A93F0 38%, #0B6BD8 72%, #0549A8 100%);
+  box-sizing: content-box;
+  width: 18px; height: 18px;
+  padding: 5px;
+  margin-right: 2px;
+  background: rgba(0,0,0,0.28);
+  border-radius: 8px;
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.65) inset,
-    0 -1px 0 rgba(0,20,70,0.55) inset,
-    0 0 0 1px rgba(255,255,255,0.14) inset,
+    inset 0 1px 1.5px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.06),
+    0 1px 0 rgba(255,255,255,0.12);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), background .3s ease;
+}
+.btn--primary.btn--sm .btn__browser-logo,
+.btn--ghost.btn--sm .btn__browser-logo { width: 14px; height: 14px; padding: 4px; border-radius: 6px; }
+.btn--primary.btn--lg .btn__browser-logo,
+.btn--ghost.btn--lg .btn__browser-logo { width: 20px; height: 20px; padding: 6px; border-radius: 10px; }
+.btn--primary:hover .btn__browser-logo,
+.btn--ghost:hover .btn__browser-logo { transform: rotate(-6deg) scale(1.06); }
+
+/* ---------- CHROME — flat azure, matte ---------- */
+.btn--primary {
+  background-color: #1A73E8;
+  background-image:
+    radial-gradient(110% 110% at 0% 0%, rgba(255,255,255,0.14), transparent 45%),
+    radial-gradient(110% 110% at 100% 100%, rgba(5,40,120,0.45), transparent 50%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.22),
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    inset 0 -2px 0 rgba(0,0,0,0.35),
     0 2px 0 rgba(4,40,100,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 10px 22px -8px rgba(27,147,240,0.55),
-    0 26px 48px -18px rgba(11,107,216,0.55);
+    0 3px 6px rgba(0,0,0,0.4),
+    0 14px 28px -16px rgba(26,115,232,0.6);
 }
 .btn--primary:hover {
-  transform: translateY(-2px);
-  filter: saturate(1.08);
+  transform: translateY(-1px);
+  filter: brightness(1.06) saturate(1.08);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.7) inset,
-    0 -1px 0 rgba(0,20,70,0.55) inset,
-    0 0 0 1px rgba(255,255,255,0.2) inset,
+    inset 0 1px 0 rgba(255,255,255,0.28),
+    inset 0 0 0 1px rgba(255,255,255,0.16),
+    inset 0 -2px 0 rgba(0,0,0,0.35),
     0 2px 0 rgba(4,40,100,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 16px 30px -8px rgba(27,147,240,0.7),
-    0 38px 64px -20px rgba(11,107,216,0.7);
+    0 3px 6px rgba(0,0,0,0.4),
+    0 22px 44px -16px rgba(26,115,232,0.75);
 }
 .btn--primary:active {
   transform: translateY(0);
-  filter: saturate(1);
+  filter: brightness(0.93);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.3) inset,
-    0 -1px 0 rgba(0,20,70,0.6) inset,
-    0 0 0 1px rgba(255,255,255,0.08) inset,
-    0 1px 0 rgba(4,40,100,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 6px 14px -6px rgba(27,147,240,0.55);
+    inset 0 2px 4px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.06),
+    0 1px 2px rgba(0,0,0,0.4);
 }
 
-/* ---------- Firefox — molten amber ---------- */
+/* ---------- FIREFOX — flat amber, matte ---------- */
 .btn--ghost {
-  background:
-    radial-gradient(140% 85% at 50% -20%, rgba(255,255,255,0.32) 0%, transparent 55%),
-    radial-gradient(120% 120% at 100% 120%, rgba(120, 20, 0, 0.55) 0%, transparent 60%),
-    linear-gradient(135deg, #FFC188 0%, #FF8A3D 35%, #F05B1C 70%, #C23812 100%);
+  background-color: #EB5A1F;
+  background-image:
+    radial-gradient(110% 110% at 0% 0%, rgba(255,255,255,0.16), transparent 45%),
+    radial-gradient(110% 110% at 100% 100%, rgba(120,25,0,0.45), transparent 50%);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.6) inset,
-    0 -1px 0 rgba(60,10,0,0.55) inset,
-    0 0 0 1px rgba(255,255,255,0.14) inset,
+    inset 0 1px 0 rgba(255,255,255,0.24),
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    inset 0 -2px 0 rgba(0,0,0,0.35),
     0 2px 0 rgba(120,35,5,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 10px 22px -8px rgba(255,130,50,0.55),
-    0 26px 48px -18px rgba(200,60,20,0.55);
+    0 3px 6px rgba(0,0,0,0.4),
+    0 14px 28px -16px rgba(235,90,31,0.6);
 }
 .btn--ghost:hover {
-  transform: translateY(-2px);
-  filter: saturate(1.08);
+  transform: translateY(-1px);
+  filter: brightness(1.06) saturate(1.08);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.7) inset,
-    0 -1px 0 rgba(60,10,0,0.55) inset,
-    0 0 0 1px rgba(255,255,255,0.2) inset,
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 0 0 1px rgba(255,255,255,0.16),
+    inset 0 -2px 0 rgba(0,0,0,0.35),
     0 2px 0 rgba(120,35,5,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 16px 30px -8px rgba(255,130,50,0.75),
-    0 38px 64px -20px rgba(200,60,20,0.7);
+    0 3px 6px rgba(0,0,0,0.4),
+    0 22px 44px -16px rgba(235,90,31,0.75);
 }
 .btn--ghost:active {
   transform: translateY(0);
-  filter: saturate(1);
+  filter: brightness(0.93);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.3) inset,
-    0 -1px 0 rgba(60,10,0,0.6) inset,
-    0 0 0 1px rgba(255,255,255,0.08) inset,
-    0 1px 0 rgba(120,35,5,0.55),
-    0 1px 2px rgba(0,0,0,0.35),
-    0 6px 14px -6px rgba(255,130,50,0.55);
+    inset 0 2px 4px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.06),
+    0 1px 2px rgba(0,0,0,0.4);
 }
 
 /* =========================================================
