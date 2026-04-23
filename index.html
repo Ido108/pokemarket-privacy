@@ -83,7 +83,9 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   height: clamp(80px, 11vw, 140px);
   width: auto;
   margin-bottom: 28px;
-  filter: drop-shadow(0 8px 30px rgba(230,30,37,0.45));
+  filter:
+    drop-shadow(0 0 18px rgba(255,255,255,0.08))
+    drop-shadow(0 0 42px rgba(255,255,255,0.05));
 }
 
 /* Real product screenshots */
@@ -558,9 +560,8 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   height: 34px;
   width: auto;
   filter:
-    drop-shadow(0 0 6px rgba(230,30,37,0.18))
-    drop-shadow(0 0 14px rgba(230,30,37,0.10))
-    drop-shadow(0 1px 3px rgba(0,0,0,0.45));
+    drop-shadow(0 0 8px rgba(255,255,255,0.08))
+    drop-shadow(0 0 20px rgba(255,255,255,0.05));
 }
 
 .nav__links {
@@ -601,8 +602,8 @@ em { font-style: normal; color: #fff; font-weight: 600; }
 }
 
 /* ==========================================================
-   Buttons — colored glassmorphism (blue / orange)
-   Big, glowing, translucent, backdrop-blurred
+   Buttons — solid brand color, sharp corners, white wordmark
+   No border, no glass, no pill. Big brand glow on hover.
    ========================================================== */
 .btn--primary,
 .btn--ghost {
@@ -613,165 +614,100 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   font-family: var(--body);
   font-weight: 600;
   font-style: normal;
-  font-size: 15.5px;
+  font-size: 15px;
   letter-spacing: -0.005em;
   text-transform: none;
   padding: 14px 22px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  -webkit-backdrop-filter: blur(22px) saturate(1.7);
-          backdrop-filter: blur(22px) saturate(1.7);
+  border-radius: 4px;
+  border: 0;
+  gap: 10px;
   transition:
-    transform .35s cubic-bezier(.2,.8,.2,1),
-    border-color .35s ease,
+    transform .3s cubic-bezier(.2,.8,.2,1),
     background .35s ease,
-    box-shadow .45s cubic-bezier(.2,.8,.2,1);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+    box-shadow .4s cubic-bezier(.2,.8,.2,1),
+    filter .25s ease;
 }
 .btn--primary.btn--sm, .btn--ghost.btn--sm {
-  font-size: 13px; padding: 8px 14px; border-radius: 5px; gap: 8px;
+  font-size: 12.5px; padding: 8px 14px; border-radius: 3px; gap: 8px;
 }
 .btn--primary.btn--lg, .btn--ghost.btn--lg {
-  font-size: 16px; padding: 16px 26px; border-radius: 7px; gap: 12px;
+  font-size: 16px; padding: 16px 28px; border-radius: 5px; gap: 12px;
   font-weight: 600;
-}
-
-/* Top-edge + left-edge hairline glass highlight */
-.btn--primary::before,
-.btn--ghost::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    160deg,
-    rgba(255,255,255,0.55) 0%,
-    rgba(255,255,255,0.14) 20%,
-    rgba(255,255,255,0.04) 45%,
-    rgba(255,255,255,0) 65%,
-    rgba(255,255,255,0.06) 100%);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-  z-index: 3;
-  opacity: 0.9;
-  transition: opacity .4s ease;
-}
-
-/* Diagonal shine band — fixed, subtle, gives the "glass" its depth */
-.btn--primary::after,
-.btn--ghost::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.28) 0%,
-    rgba(255,255,255,0.06) 22%,
-    rgba(255,255,255,0) 45%,
-    rgba(255,255,255,0) 75%,
-    rgba(255,255,255,0.05) 100%);
-  pointer-events: none;
-  mix-blend-mode: overlay;
-  opacity: 0.9;
-  z-index: 1;
-  transition: opacity .4s ease;
 }
 
 .btn--primary > *,
 .btn--ghost > * { position: relative; z-index: 2; }
 
-/* Wordmark (logo + brand text) — height-locked, width auto */
+/* Wordmark (brand logo + brand text, rendered as white silhouette) */
 .btn__wordmark {
   display: block;
-  height: 20px;
+  height: 22px;
   width: auto;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.45));
+  filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.5));
   transition: transform .35s cubic-bezier(.2,.8,.2,1), filter .35s ease;
 }
-.btn--sm .btn__wordmark { height: 16px; }
-.btn--lg .btn__wordmark { height: 24px; }
-/* Firefox wordmark has dark text — brighten it on the orange glass */
-.btn--ghost .btn__wordmark--firefox { filter: brightness(1) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
-/* Chrome wordmark text is medium gray — lift it to near-white for contrast */
-.btn--primary .btn__wordmark--chrome { filter: brightness(1) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
+.btn--sm .btn__wordmark { height: 15px; }
+.btn--lg .btn__wordmark { height: 26px; }
 
 .btn__text {
   font-weight: 500;
-  opacity: 0.82;
-  letter-spacing: 0.01em;
+  opacity: 0.9;
+  letter-spacing: 0;
+  color: rgba(255,255,255,0.88);
 }
-.btn--lg .btn__text { font-weight: 550; opacity: 0.88; }
+.btn--lg .btn__text { font-weight: 550; font-size: 16px; }
+.btn--sm .btn__text { font-size: 12.5px; }
 
-/* ---------- CHROME — sky-blue glass ---------- */
+/* ---------- CHROME — saturated google blue ---------- */
 .btn--primary {
   background:
-    radial-gradient(130% 120% at 0% 0%, rgba(180,220,255,0.35) 0%, transparent 55%),
-    radial-gradient(130% 120% at 100% 100%, rgba(10,70,200,0.35) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(56,149,255,0.38) 0%, rgba(20,90,210,0.32) 100%);
-  border-color: rgba(140,200,255,0.38);
+    radial-gradient(130% 140% at 20% 0%, rgba(120,180,255,0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #2B85F0 0%, #1565D4 55%, #0D4AB3 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.28),
-    inset 0 -1px 0 rgba(0,30,90,0.35),
-    0 1px 2px rgba(0,0,0,0.3),
-    0 8px 20px -6px rgba(30,120,240,0.38),
-    0 22px 50px -18px rgba(20,90,210,0.55);
+    0 1px 2px rgba(0,0,0,0.35),
+    0 8px 22px -8px rgba(30,120,240,0.55),
+    0 24px 50px -20px rgba(13,74,179,0.7);
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  border-color: rgba(180,220,255,0.6);
   background:
-    radial-gradient(130% 120% at 0% 0%, rgba(200,230,255,0.45) 0%, transparent 55%),
-    radial-gradient(130% 120% at 100% 100%, rgba(15,90,230,0.45) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(80,170,255,0.48) 0%, rgba(25,110,235,0.42) 100%);
+    radial-gradient(130% 140% at 20% 0%, rgba(140,195,255,0.35) 0%, transparent 55%),
+    linear-gradient(180deg, #3A93FB 0%, #1B71E0 55%, #0F52BD 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.38),
-    inset 0 -1px 0 rgba(0,30,90,0.35),
-    0 1px 2px rgba(0,0,0,0.3),
-    0 12px 28px -6px rgba(30,120,240,0.55),
-    0 34px 72px -18px rgba(20,90,210,0.7);
+    0 1px 2px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(120,180,255,0.2),
+    0 14px 32px -8px rgba(40,135,255,0.8),
+    0 38px 80px -20px rgba(13,74,179,0.9);
 }
-.btn--primary:hover .btn__browser-logo {
-  transform: scale(1.08);
-  filter: drop-shadow(0 3px 8px rgba(80,170,255,0.6));
+.btn--primary:hover .btn__wordmark {
+  transform: scale(1.04);
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(140,200,255,0.8));
 }
 
-/* ---------- FIREFOX — amber glass ---------- */
+/* ---------- FIREFOX — saturated mozilla amber ---------- */
 .btn--ghost {
   background:
-    radial-gradient(130% 120% at 0% 0%, rgba(255,220,180,0.4) 0%, transparent 55%),
-    radial-gradient(130% 120% at 100% 100%, rgba(200,60,10,0.38) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(255,140,70,0.38) 0%, rgba(220,80,25,0.32) 100%);
-  border-color: rgba(255,195,150,0.42);
+    radial-gradient(130% 140% at 20% 0%, rgba(255,200,140,0.28) 0%, transparent 55%),
+    linear-gradient(180deg, #FF7A2A 0%, #E85517 55%, #C23E0B 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.3),
-    inset 0 -1px 0 rgba(80,20,0,0.35),
-    0 1px 2px rgba(0,0,0,0.3),
-    0 8px 20px -6px rgba(255,130,50,0.4),
-    0 22px 50px -18px rgba(220,80,25,0.55);
+    0 1px 2px rgba(0,0,0,0.35),
+    0 8px 22px -8px rgba(255,100,40,0.55),
+    0 24px 50px -20px rgba(194,62,11,0.7);
 }
 .btn--ghost:hover {
   transform: translateY(-2px);
-  border-color: rgba(255,220,180,0.65);
   background:
-    radial-gradient(130% 120% at 0% 0%, rgba(255,230,200,0.5) 0%, transparent 55%),
-    radial-gradient(130% 120% at 100% 100%, rgba(215,70,15,0.48) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(255,160,90,0.48) 0%, rgba(235,95,30,0.42) 100%);
+    radial-gradient(130% 140% at 20% 0%, rgba(255,210,155,0.38) 0%, transparent 55%),
+    linear-gradient(180deg, #FF8A3E 0%, #F15F1E 55%, #CF4510 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.4),
-    inset 0 -1px 0 rgba(80,20,0,0.35),
-    0 1px 2px rgba(0,0,0,0.3),
-    0 12px 28px -6px rgba(255,130,50,0.6),
-    0 34px 72px -18px rgba(220,80,25,0.7);
+    0 1px 2px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,200,140,0.22),
+    0 14px 32px -8px rgba(255,120,55,0.85),
+    0 38px 80px -20px rgba(194,62,11,0.9);
 }
-.btn--ghost:hover .btn__browser-logo {
-  transform: scale(1.08);
-  filter: drop-shadow(0 3px 8px rgba(255,160,90,0.6));
+.btn--ghost:hover .btn__wordmark {
+  transform: scale(1.04);
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255,200,140,0.85));
 }
 
 .btn--primary:active,
@@ -2208,12 +2144,12 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   </nav>
   <div class="nav__cta">
     <a class="btn btn--primary btn--sm" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
-      <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/chrome-Logo.png" alt="" aria-hidden="true">
-      Add to Chrome
+      <span class="btn__text">Add to</span>
+      <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Chrome">
     </a>
     <a class="btn btn--ghost btn--sm" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
-      <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/firefox-Logo.png" alt="" aria-hidden="true">
-      Add to Firefox
+      <span class="btn__text">Add to</span>
+      <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Firefox">
     </a>
   </div>
 </header>
@@ -2237,12 +2173,12 @@ em { font-style: normal; color: #fff; font-weight: 600; }
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
-          <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/chrome-Logo.png" alt="" aria-hidden="true">
-          <span>Add to Chrome</span>
+          <span class="btn__text">Add to</span>
+          <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Chrome">
         </a>
         <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
-          <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/firefox-Logo.png" alt="" aria-hidden="true">
-          <span>Add to Firefox</span>
+          <span class="btn__text">Add to</span>
+          <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Firefox">
         </a>
       </div>
     </div>
@@ -2536,12 +2472,12 @@ em { font-style: normal; color: #fff; font-weight: 600; }
     <p class="cta__sub">Install PokeMarkt. Free for Chrome and Firefox.</p>
     <div class="cta__buttons">
       <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
-        <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/chrome-Logo.png" alt="" aria-hidden="true">
-        <span>Add to Chrome</span>
+        <span class="btn__text">Add to</span>
+        <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Chrome">
       </a>
       <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
-        <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/firefox-Logo.png" alt="" aria-hidden="true">
-        <span>Add to Firefox</span>
+        <span class="btn__text">Add to</span>
+        <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Firefox">
       </a>
     </div>
   </div>
