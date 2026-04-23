@@ -689,31 +689,16 @@ em { font-style: normal; color: #fff; font-weight: 600; }
 .btn--primary > *,
 .btn--ghost > * { position: relative; z-index: 2; }
 
-/* Wordmark — original brand colors, crisp on dark glass */
+/* Wordmark — original brand colors, no hue shifts */
 .btn__wordmark {
   display: block;
   height: 34px;
   width: auto;
   transition: transform .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.55));
 }
 .btn--sm .btn__wordmark { height: 18px; }
 .btn--lg .btn__wordmark { height: 40px; }
-/* Chrome wordmark 'chrome' text is gray — lift toward white for readability */
-.btn--primary .btn__wordmark {
-  filter:
-    brightness(1.35)
-    contrast(1.1)
-    drop-shadow(0 2px 4px rgba(0,0,0,0.6));
-}
-/* Firefox wordmark 'Firefox' text is near-black — invert+hue-rotate keeps
-   the orange fox orange while flipping the dark text to light */
-.btn--ghost .btn__wordmark {
-  filter:
-    invert(1) hue-rotate(180deg)
-    saturate(1.15)
-    drop-shadow(0 2px 4px rgba(0,0,0,0.6));
-}
 
 /* ---------- Hover ---------- */
 .btn--primary:hover,
@@ -2192,16 +2177,14 @@ em { font-style: normal; color: #fff; font-weight: 600; }
         <span class="hero__title-fat">wherever you browse.</span>
       </h1>
       <p class="hero__sub">
-        Real market values and top cards, stamped on every Pokémon TCG listing you browse — sealed, singles, or slabs.
+        An overlay extension for ANY site. Watch market values and top cards for any Pokémon TCG products while you browse.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
-          <span class="btn__text">Add to</span>
-          <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Chrome">
+          <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Add to Chrome">
         </a>
         <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
-          <span class="btn__text">Add to</span>
-          <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Firefox">
+          <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Add to Firefox">
         </a>
       </div>
     </div>
@@ -2495,12 +2478,10 @@ em { font-style: normal; color: #fff; font-weight: 600; }
     <p class="cta__sub">Install PokeMarkt. Free for Chrome and Firefox.</p>
     <div class="cta__buttons">
       <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
-        <span class="btn__text">Add to</span>
-        <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Chrome">
+        <img class="btn__wordmark" src="assets/chrome-wordmark.png" alt="Add to Chrome">
       </a>
       <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
-        <span class="btn__text">Add to</span>
-        <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Firefox">
+        <img class="btn__wordmark" src="assets/firefox-wordmark.png" alt="Add to Firefox">
       </a>
     </div>
   </div>
