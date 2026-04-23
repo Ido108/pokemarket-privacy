@@ -593,36 +593,45 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   margin-top: 2px;
 }
 
+/* Chrome — sky blue (תכלת) */
 .btn--primary {
-  background: linear-gradient(180deg, var(--crimson-2) 0%, var(--crimson) 100%);
+  background: linear-gradient(180deg, #38BDF8 0%, #0284C7 100%);
   color: #fff;
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.25) inset,
-    0 -1px 0 rgba(0,0,0,0.2) inset,
-    0 10px 28px -8px var(--crimson-glow),
-    0 2px 0 rgba(150,15,20,0.4);
+    0 1px 0 rgba(255,255,255,0.30) inset,
+    0 -1px 0 rgba(0,0,0,0.20) inset,
+    0 10px 28px -8px rgba(14,165,233,0.55),
+    0 2px 0 rgba(3,105,161,0.45);
 }
 .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.3) inset,
-    0 -1px 0 rgba(0,0,0,0.2) inset,
-    0 16px 36px -8px var(--crimson-glow),
-    0 2px 0 rgba(150,15,20,0.4);
+    0 1px 0 rgba(255,255,255,0.35) inset,
+    0 -1px 0 rgba(0,0,0,0.20) inset,
+    0 16px 36px -8px rgba(14,165,233,0.70),
+    0 2px 0 rgba(3,105,161,0.45);
 }
 .btn--primary:active { transform: translateY(0); }
 
+/* Firefox — orange */
 .btn--ghost {
-  background: rgba(255,255,255,0.04);
-  color: var(--txt);
-  border: 1px solid var(--line-2);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, #FF9556 0%, #E65A1A 100%);
+  color: #fff;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.30) inset,
+    0 -1px 0 rgba(0,0,0,0.20) inset,
+    0 10px 28px -8px rgba(255,113,57,0.55),
+    0 2px 0 rgba(180,65,10,0.45);
 }
 .btn--ghost:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: var(--line-3);
   transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.35) inset,
+    0 -1px 0 rgba(0,0,0,0.20) inset,
+    0 16px 36px -8px rgba(255,113,57,0.70),
+    0 2px 0 rgba(180,65,10,0.45);
 }
+.btn--ghost:active { transform: translateY(0); }
 
 /* =========================================================
    HERO
@@ -630,7 +639,7 @@ em { font-style: normal; color: #fff; font-weight: 600; }
 .hero {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 72px 40px 80px;
+  padding: 72px 40px 36px;
 }
 .hero__grid {
   display: grid;
@@ -1293,10 +1302,10 @@ em { font-style: normal; color: #fff; font-weight: 600; }
    ========================================================= */
 .stats {
   max-width: 1360px;
-  margin: 30px auto 0;
-  padding: 26px 40px;
+  margin: 8px auto 0;
+  padding: 20px 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -1364,7 +1373,7 @@ em { font-style: normal; color: #fff; font-weight: 600; }
    ========================================================= */
 .how {
   max-width: 1360px;
-  margin: 90px auto 0;
+  margin: 48px auto 0;
   padding: 0 40px;
 }
 .how__steps {
@@ -2084,7 +2093,7 @@ em { font-style: normal; color: #fff; font-weight: 600; }
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
           <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/chrome-Logo.png" alt="" aria-hidden="true">
-          <span>Add to Chrome<small>It's free</small></span>
+          <span>Add to Chrome</span>
         </a>
         <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
           <img class="btn__browser-logo" src="https://storage.googleapis.com/eighth-block-311611.appspot.com/firefox-Logo.png" alt="" aria-hidden="true">
@@ -2093,7 +2102,6 @@ em { font-style: normal; color: #fff; font-weight: 600; }
       </div>
       <div class="hero__trust">
         <span class="dot"></span> Free
-        <span class="dot"></span> No account
         <span class="dot"></span> Chrome &amp; Firefox
       </div>
     </div>
@@ -2268,10 +2276,6 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   <div class="stats__item">
     <div class="stats__num">Sort</div>
     <div class="stats__lbl">By market, top card, value</div>
-  </div>
-  <div class="stats__item">
-    <div class="stats__num">Free</div>
-    <div class="stats__lbl">No account</div>
   </div>
 </section>
 
