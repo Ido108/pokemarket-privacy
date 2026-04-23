@@ -553,8 +553,15 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   letter-spacing: 0.02em;
   color: var(--txt);
 }
-.nav__brand img { width: 32px; height: 32px; filter: drop-shadow(0 2px 8px rgba(230,30,37,0.4)); }
-.nav__brand span { background: linear-gradient(180deg, #fff, #c7c7cf); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav__brand-logo {
+  display: block;
+  height: 34px;
+  width: auto;
+  filter:
+    drop-shadow(0 0 6px rgba(230,30,37,0.18))
+    drop-shadow(0 0 14px rgba(230,30,37,0.10))
+    drop-shadow(0 1px 3px rgba(0,0,0,0.45));
+}
 
 .nav__links {
   display: flex; gap: 28px;
@@ -609,8 +616,8 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   font-size: 15.5px;
   letter-spacing: -0.005em;
   text-transform: none;
-  padding: 16px 26px;
-  border-radius: 14px;
+  padding: 14px 22px;
+  border-radius: 6px;
   border: 1px solid transparent;
   -webkit-backdrop-filter: blur(22px) saturate(1.7);
           backdrop-filter: blur(22px) saturate(1.7);
@@ -622,11 +629,11 @@ em { font-style: normal; color: #fff; font-weight: 600; }
   text-shadow: 0 1px 2px rgba(0,0,0,0.35);
 }
 .btn--primary.btn--sm, .btn--ghost.btn--sm {
-  font-size: 13px; padding: 10px 16px; border-radius: 10px;
+  font-size: 13px; padding: 8px 14px; border-radius: 5px; gap: 8px;
 }
 .btn--primary.btn--lg, .btn--ghost.btn--lg {
-  font-size: 17px; padding: 18px 30px; border-radius: 16px;
-  font-weight: 650;
+  font-size: 16px; padding: 16px 26px; border-radius: 7px; gap: 12px;
+  font-weight: 600;
 }
 
 /* Top-edge + left-edge hairline glass highlight */
@@ -679,21 +686,27 @@ em { font-style: normal; color: #fff; font-weight: 600; }
 .btn--primary > *,
 .btn--ghost > * { position: relative; z-index: 2; }
 
-/* Browser logo — clean, crisp, with color-aware shadow */
-.btn--primary .btn__browser-logo,
-.btn--ghost .btn__browser-logo {
-  width: 20px; height: 20px;
-  padding: 0;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+/* Wordmark (logo + brand text) — height-locked, width auto */
+.btn__wordmark {
+  display: block;
+  height: 20px;
+  width: auto;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.45));
   transition: transform .35s cubic-bezier(.2,.8,.2,1), filter .35s ease;
 }
-.btn--primary.btn--sm .btn__browser-logo,
-.btn--ghost.btn--sm .btn__browser-logo { width: 15px; height: 15px; }
-.btn--primary.btn--lg .btn__browser-logo,
-.btn--ghost.btn--lg .btn__browser-logo { width: 22px; height: 22px; }
+.btn--sm .btn__wordmark { height: 16px; }
+.btn--lg .btn__wordmark { height: 24px; }
+/* Firefox wordmark has dark text — brighten it on the orange glass */
+.btn--ghost .btn__wordmark--firefox { filter: brightness(1) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
+/* Chrome wordmark text is medium gray — lift it to near-white for contrast */
+.btn--primary .btn__wordmark--chrome { filter: brightness(1) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
+
+.btn__text {
+  font-weight: 500;
+  opacity: 0.82;
+  letter-spacing: 0.01em;
+}
+.btn--lg .btn__text { font-weight: 550; opacity: 0.88; }
 
 /* ---------- CHROME — sky-blue glass ---------- */
 .btn--primary {
@@ -2187,8 +2200,7 @@ em { font-style: normal; color: #fff; font-weight: 600; }
 <!-- Nav -->
 <header class="nav">
   <a class="nav__brand" href="#top">
-    <img src="assets/Main-Icon-48.png" alt="">
-    <span>PokeMarkt</span>
+    <img src="assets/Main-Logo.png" alt="PokeMarkt" class="nav__brand-logo">
   </a>
   <nav class="nav__links">
     <a href="#how">How it works</a>
