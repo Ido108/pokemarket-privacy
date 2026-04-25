@@ -1,0 +1,62 @@
+﻿[
+    {
+        "file":  "assets/cards/card-01.png",
+        "name":  "Mega Zygarde ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-124/large"
+    },
+    {
+        "file":  "assets/cards/card-02.png",
+        "name":  "Meowth ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-121/large"
+    },
+    {
+        "file":  "assets/cards/card-03.png",
+        "name":  "Mega Zygarde ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-120/large"
+    },
+    {
+        "file":  "assets/cards/card-04.png",
+        "name":  "Mega Clefable ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-119/large"
+    },
+    {
+        "file":  "assets/cards/card-05.png",
+        "name":  "Mega Starmie ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-118/large"
+    },
+    {
+        "file":  "assets/cards/card-06.png",
+        "name":  "Meowth ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-107/large"
+    },
+    {
+        "file":  "assets/cards/card-07.png",
+        "name":  "Mega Skarmory ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-106/large"
+    },
+    {
+        "file":  "assets/cards/card-08.png",
+        "name":  "Yveltal ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-105/large"
+    },
+    {
+        "file":  "assets/cards/card-09.png",
+        "name":  "Mega Zygarde ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-104/large"
+    },
+    {
+        "file":  "assets/cards/card-10.png",
+        "name":  "Mega Clefable ex",
+        "set":  "Perfect Order",
+        "source":  "https://images.scrydex.com/pokemon/me3-103/large"
+    }
+]

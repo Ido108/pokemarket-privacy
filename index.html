@@ -5,8 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PokeMarkt - Live Pokémon TCG market prices on any site</title>
 <meta name="description" content="A Chrome & Firefox extension that stamps real-time Pokémon TCG market values and top cards onto every listing — sealed, singles, or slabs. Spot deals. Dodge markups. Know what a box is really worth.">
-<link rel="icon" type="image/png" href="assets/Main-Icon-48.png">
-<link rel="apple-touch-icon" href="assets/Main-Icon-128.png">
+
+<!-- Canonical + base SEO -->
+<link rel="canonical" href="https://pokemarkt.com/">
+<meta name="theme-color" content="#E61E25">
+<meta name="application-name" content="PokeMarkt">
+<meta name="keywords" content="pokemon tcg, pokemon cards, pokemon prices, tcg market, sealed pokemon, pokemon singles, pokemon slabs, browser extension, chrome extension, firefox extension, ebay pokemon, tcgplayer, deal finder, card investing, pokemon collectibles">
+<meta name="author" content="PokeMarkt">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pokemarkt.com/">
+<meta property="og:site_name" content="PokeMarkt">
+<meta property="og:title" content="PokeMarkt — Live Pokémon TCG market prices on any site">
+<meta property="og:description" content="A Chrome & Firefox extension that stamps real-time Pokémon TCG market values onto every listing — sealed, singles, or slabs. Spot deals. Dodge markups.">
+<meta property="og:image" content="https://pokemarkt.com/assets/og-image-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PokeMarkt extension overlaying live market prices on a Pokemon card listing">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pokemarkt">
+<meta name="twitter:creator" content="@pokemarkt">
+<meta name="twitter:title" content="PokeMarkt — Live Pokémon TCG market prices on any site">
+<meta name="twitter:description" content="Chrome & Firefox extension that stamps real-time market prices onto every Pokémon TCG listing. Sealed, singles, slabs.">
+<meta name="twitter:image" content="https://pokemarkt.com/assets/twitter-card-1200x675.png">
+<meta name="twitter:image:alt" content="PokeMarkt overlay showing live prices on a Pokemon card listing">
+
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PokeMarkt",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Firefox",
+  "description": "Browser extension that stamps live Pokémon TCG market prices onto every product listing — sealed, singles, slabs.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://pokemarkt.com/",
+  "downloadUrl": "https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe",
+  "softwareVersion": "1.0",
+  "publisher": { "@type": "Organization", "name": "PokeMarkt" }
+}
+</script>
+
+<!-- Plausible Analytics — privacy-friendly, no cookies, no PII -->
+<script defer data-domain="pokemarkt.com" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/Main-Icon-48.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/assets/Main-Icon-128.png">
+<link rel="apple-touch-icon" href="/assets/Main-Icon-128.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -2069,11 +2120,11 @@ em { font-style: normal; color: #fff; font-weight: 600; }
     <a href="#features">Features</a>
   </nav>
   <div class="nav__cta">
-    <a class="btn btn--primary btn--sm" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
+    <a class="btn btn--primary btn--sm" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="chrome">
       <img class="btn__browser-logo" src="assets/chrome-icon.png" alt="Chrome">
           Add to Chrome
     </a>
-    <a class="btn btn--ghost btn--sm" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
+    <a class="btn btn--ghost btn--sm" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="firefox">
       <img class="btn__browser-logo" src="assets/firefox-icon.png" alt="Firefox">
           Add to Firefox
     </a>
@@ -2098,11 +2149,11 @@ em { font-style: normal; color: #fff; font-weight: 600; }
         An overlay extension for ANY site. Watch market values and top cards for any Pokémon TCG products while you browse.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
+        <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="chrome">
           <img class="btn__browser-logo" src="assets/chrome-icon.png" alt="Chrome">
           Add to Chrome
         </a>
-        <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
+        <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="firefox">
           <img class="btn__browser-logo" src="assets/firefox-icon.png" alt="Firefox">
           Add to Firefox
         </a>
@@ -2397,11 +2448,11 @@ em { font-style: normal; color: #fff; font-weight: 600; }
     <h2 class="cta__title">See the market<br>before you buy.</h2>
     <p class="cta__sub">Install PokeMarkt. Free for Chrome and Firefox.</p>
     <div class="cta__buttons">
-      <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
+      <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="chrome">
         <img class="btn__browser-logo" src="assets/chrome-icon.png" alt="Chrome">
           Add to Chrome
       </a>
-      <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
+      <a class="btn btn--ghost btn--lg" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener" data-analytics-event="Install Click" data-analytics-event-store="firefox">
         <img class="btn__browser-logo" src="assets/firefox-icon.png" alt="Firefox">
           Add to Firefox
       </a>
