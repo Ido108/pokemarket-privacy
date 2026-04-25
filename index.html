@@ -98,16 +98,17 @@
     display: flex;
     gap: 14px;
     margin-top: 32px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   /* Square install buttons — both same color, clean & premium */
   .install {
     position: relative;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
     align-items: center;
-    gap: 18px;
+    column-gap: 18px;
     height: 88px;
-    padding: 0 32px;
+    padding: 0 18px;
     border-radius: 14px;
     font-weight: 700;
     letter-spacing: -.005em;
@@ -119,7 +120,16 @@
     box-shadow:
       0 1px 0 rgba(255,255,255,.06) inset,
       0 14px 32px rgba(0,0,0,.5);
+    flex: 1 1 0;
+    min-width: 0;
   }
+  .install__icon {
+    grid-column: 1;
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
+    padding: 4px;
+  }
+  .install__icon img { width: 100%; height: 100%; object-fit: contain; }
   .install:hover {
     transform: translateY(-2px);
     background: #1d1d22;
@@ -128,17 +138,13 @@
       0 1px 0 rgba(255,255,255,.08) inset,
       0 22px 44px rgba(0,0,0,.6);
   }
-  .install__icon {
-    width: 44px; height: 44px;
-    display: grid; place-items: center;
-    flex: 0 0 auto;
-  }
-  .install__icon img { width: 100%; height: 100%; object-fit: contain; }
   .install__text {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     line-height: 1.05;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
   .install__text small {
     font-family: var(--mono);
@@ -151,14 +157,9 @@
   }
   .install__text strong { font-weight: 800; font-size: 22px; letter-spacing: -.02em; }
 
-  /* Primary (Chrome) gets a subtle red accent line on the left to differentiate without breaking unity */
+  /* Both buttons identical — fully symmetrical */
   .install--chrome::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 18px; bottom: 18px;
-    width: 3px;
-    background: var(--crimson-2);
-    border-radius: 0 3px 3px 0;
+    display: none;
   }
   .top__cta { display: inline-flex; gap: 8px; }
   .pill {
@@ -254,7 +255,8 @@
   }
   .hero__logo {
     display: inline-block;
-    width: clamp(440px, 46vw, 680px);
+    width: clamp(240px, 42vw, 640px);
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     filter: drop-shadow(0 14px 40px rgba(225,29,42,.5));
@@ -712,7 +714,7 @@
   .closer__buttons {
     display: inline-flex;
     gap: 14px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
   }
 
@@ -836,8 +838,9 @@
     .how { margin-bottom: 36px; }
     .how__step { padding: 22px; }
     .how__num { font-size: 42px; margin-bottom: 10px; }
-    .closer__buttons { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; margin: 0 auto; }
-    .closer__buttons .btn { justify-content: center; }
+    .closer__buttons { gap: 10px; }
+    .install { padding: 0 18px; gap: 12px; height: 76px; }
+    .install__text strong { font-size: 18px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -867,44 +870,44 @@
 
 <!-- ============ SCREEN 1: HERO ============ -->
 <section class="screen hero" data-screen-label="01 Hero">
-  <div class="wrap hero__top" style="margin: 6px 0px 37px; padding: 11px 0px 0px; width: 1672px">
-    <img class="hero__logo" src="assets/Main-Logo.png" alt="PokeMarkt" style="object-fit: cover; width: 847px; height: 187px; padding: 0px; margin: 8.6665px; border-width: 0px; border-style: solid; border-radius: 0px">
+  <div class="wrap hero__top">
+    <img class="hero__logo" src="assets/Main-Logo.png" alt="PokeMarkt" style="padding: 0px; margin: 22px">
   </div>
-  <div class="wrap hero__main" style="padding: 0px">
+  <div class="wrap hero__main">
     <div class="hero__copy">
-      <h1>
+      <h1 style="font-size: 67px">
         Market prices.<br>
         <span class="accent">Right on the listing.</span>
       </h1>
-      <p class="hero__sub">
+      <p class="hero__sub" style="margin: 6px 0px 0px">
         See market price, store price, gap, and top cards on every Pokemon TCG product, as you browse.
       </p>
       <div class="hero__cta">
         <a class="install install--chrome" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
           <span class="install__icon"><img src="assets/chrome-icon.png" alt=""></span>
           <span class="install__text">
-            <small>Add to</small>
-            <strong>Chrome</strong>
+            <small style="letter-spacing: 4px; text-align: center; width: 163px">Add to</small>
+            <strong style="letter-spacing: 9.2px; width: 158px">Chrome</strong>
           </span>
         </a>
         <a class="install install--firefox" href="https://addons.mozilla.org/en-US/firefox/addon/pokemarket-pokemon-tcg-prices/" target="_blank" rel="noopener">
           <span class="install__icon"><img src="assets/firefox-icon.png" alt=""></span>
           <span class="install__text">
-            <small>Add to</small>
-            <strong>Firefox</strong>
+            <small style="width: 158px; letter-spacing: 4.2px">Add to</small>
+            <strong style="letter-spacing: 7.3px; text-align: center; width: 158px">Firefox</strong>
           </span>
         </a>
       </div>
     </div>
 
-    <div class="hero__visual">
+    <div class="hero__visual" style="width: 544px">
       <div class="hero__demo">
-        <img src="assets/demo.gif" alt="PokeMarkt overlay running on Amazon." style="width: 652px; padding: 0px; object-fit: cover; opacity: 2.33; border-radius: 0px; border-width: 0px; margin: -0.666504px">
+        <img src="assets/demo.gif" alt="PokeMarkt overlay running on Amazon." style="width: 100%; max-width: 652px; height: auto; object-fit: cover;">
       </div>
     </div>
   </div>
 
-  <div class="strip" aria-hidden="true" style="padding: 128.667px 0px 0px; font-size: 16px; font-weight: 700; height: 428px; line-height: 0.05; letter-spacing: -4px; border-width: 0px; border-style: solid; border-radius: 0px; margin: -43.3333px">
+  <div class="strip" aria-hidden="true">
     <div class="strip__track" id="strip"></div>
   </div>
 </section>
@@ -913,8 +916,8 @@
 <!-- ============ SCREEN 2: FEATURES ============ -->
 <section class="screen features" data-screen-label="02 Features">
   <div class="wrap" style="font-weight: 900">
-    <div class="section-head" style="font-size: 113px">
-      <h2 style="font-size: 101px">Everything you need. <em>Nothing you don't.</em></h2>
+    <div class="section-head">
+      <h2 style="font-size: clamp(40px, 7vw, 101px); line-height: 1.05;">Everything you need. <em>Nothing you don't.</em></h2>
     </div>
 
     <div class="feat-grid">
@@ -991,8 +994,8 @@
       </article>
     </div>
 
-    <div class="closer__cta" style="height: 690px; padding: 0px; margin: -67.3333px; border-width: 0px; border-radius: 0px">
-      <h2 style="margin: 70.6663px 0px 36px; font-size: 119px">See the market <em>before</em> you buy.</h2>
+    <div class="closer__cta">
+      <h2 style="font-size: clamp(40px, 8vw, 119px); line-height: 1.05; margin: 0 0 36px;">See the market <em>before</em> you buy.</h2>
       <div class="hero__cta closer__buttons">
         <a class="install install--chrome" href="https://chromewebstore.google.com/detail/pokemarket-pokemon-tcg-li/hejfdmhhblhaiajfegbokfgceoahfkoe" target="_blank" rel="noopener">
           <span class="install__icon"><img src="assets/chrome-icon.png" alt=""></span>
