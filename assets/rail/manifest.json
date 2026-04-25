@@ -1,0 +1,422 @@
+﻿[
+    {
+        "file":  "assets/rail/card-01.webp",
+        "name":  "Darkrai ex",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/tcgp/A2/187/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-01.png",
+        "name":  "Hisuian Zoroark VSTAR Premium Collection Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/vg2jaqlrny3rhb4j/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-02.webp",
+        "name":  "Galarian Zigzagoon",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/me/me02.5/130/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-02.png",
+        "name":  "Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/u5xnrlbvhqoqnwaq/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-03.webp",
+        "name":  "Pikachu",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/swsh/swsh12.5/GG30/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-03.png",
+        "name":  "Enhanced Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/fi6xeuzccmysuq7y/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-04.png",
+        "name":  "Celadon City Gym",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/gym1/107_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-04.png",
+        "name":  "Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/lfjxmhcp67chfhq4/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-05.webp",
+        "name":  "Tranquill",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/bw/bw7/124/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-05.png",
+        "name":  "Meowscarada ex Premium Collection Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/0e1137c0bf5ec43c080e8c7dcaaede3df9aef4f94cada6deee2fa48625d5201c/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-06.webp",
+        "name":  "Krookodile",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/swsh/swsh12/113/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-06.png",
+        "name":  "Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/8ea0913bb2c402ef339deeb9c930cc5fcfbfc930775b3c682660f7c0ee9aaa5e/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-07.webp",
+        "name":  "Grafaiai",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/me/me01/092/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-07.png",
+        "name":  "Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/62dd3ddbc2c83c3b2fdcd5cc619a5cc4f7673240419815e98131d246dfeddf3c/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-08.png",
+        "name":  "Magnemite",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/ex6/68_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-08.png",
+        "name":  "Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/a4e8275a40b37ad5596467465f48148b8709584a768803afa6b9697ab9cd5252/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-09.webp",
+        "name":  "Golurk",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/xy/xy3/43/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-09.png",
+        "name":  "Elite Trainer Box [Mega Lucario]",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/6esna7b7vltlrsxp/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-10.png",
+        "name":  "Chikorita",
+        "kind":  "card",
+        "source":  "https://images.scrydex.com/pokemon/me2pt5-8/large"
+    },
+    {
+        "file":  "assets/rail/product-10.png",
+        "name":  "Booster Box [Build \u0026 Battle]",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/0d7fca032dd0ae272709790968569de838e07e10f7a213344a16cf92ab8a8347/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-11.png",
+        "name":  "Frosmoth",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/swsh10tg/TG04_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-11.png",
+        "name":  "Mini Tin: Riolu \u0026 Darumaka",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/5gc6kenrmkqp3jbm/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-12.png",
+        "name":  "Dunsparce",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/xy1/101_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-12.png",
+        "name":  "Booster Box [Base Set]",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/baf59ecdf4dee6d9996c7e69ad0fc24b0af27c4f01285e0f4e034a544815d7d8/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-13.png",
+        "name":  "Ninetales",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sv3/199_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-13.png",
+        "name":  "Sleeved Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/uid4qhycshsog3gx/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-14.webp",
+        "name":  "Tropius",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sv/sv09/123/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-14.png",
+        "name":  "Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/w644tm4iqvfy2kzl/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-15.png",
+        "name":  "Aipom",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/xy11/90_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-15.png",
+        "name":  "Elite Trainer Box [Groudon]",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/ssfpzi7sojulh6q4/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-16.png",
+        "name":  "Castform Snowy Form",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/swsh6/34_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-16.png",
+        "name":  "Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/2wgxqiehhqtdduau/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-17.webp",
+        "name":  "Toxtricity VMAX",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/swsh/swsh2/71/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-17.png",
+        "name":  "Terapagos Ex Ultra Premium Collection Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/dp5rnszlv76s5gga/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-18.webp",
+        "name":  "Manectric",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/ex/ex9/16/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-18.png",
+        "name":  "Sleeved Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/volgs5v24fwita5a/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-19.webp",
+        "name":  "Goldeen",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/ex/ex8/61/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-19.png",
+        "name":  "Elite Trainer Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/36f1ec389b83646c6baec4b44e31bb3c90f9ab40fc2855815cc2071c6e5e1a40/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-20.png",
+        "name":  "Lillipup",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/bw1/80_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-20.png",
+        "name":  "Booster Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/31d3ac2325e07cd3962abe71078e44c202b4000b01007f0a28a8d3117edeed19/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-21.png",
+        "name":  "Klinklang",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/bw2/76_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-21.png",
+        "name":  "Booster Box [1st Edition]",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/2b1f5263c1529587ce064c15378bede18a7a50adf2cea00ceefdf9312648566f/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-22.png",
+        "name":  "Flygon ex",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sv8/222_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-22.png",
+        "name":  "Moltres Zapdos Articuno Blister Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/uwq3ve5yhf4hb2q4/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-23.png",
+        "name":  "Unown [F]",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/neo2/48_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-23.png",
+        "name":  "Special Collection Box - Marnie",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/lhbh262n6lopgehk/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-24.webp",
+        "name":  "Wobbuffet",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/xy/g1/RC11/high.webp"
+    },
+    {
+        "file":  "assets/rail/product-24.png",
+        "name":  "Booster Box",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/03548f65701c23a68d1860061ef90f7d65900573e59ab7da26e36dd9a06da91e/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-25.png",
+        "name":  "Luxray BREAK",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/xy9/47_hires.png"
+    },
+    {
+        "file":  "assets/rail/product-25.png",
+        "name":  "Blister Pack",
+        "kind":  "product",
+        "source":  "https://storage.googleapis.com/images.pricecharting.com/2197ec217007e48b2eeb2ef230c4833c35b0a565012167c4974e19281d13d147/1600.jpg"
+    },
+    {
+        "file":  "assets/rail/card-26.webp",
+        "name":  "Decidueye ex",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sv/sv03/015/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-27.png",
+        "name":  "Kyogre",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/ex9/6_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-28.png",
+        "name":  "Buddy-Buddy Poffin",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sv5/144_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-29.webp",
+        "name":  "Scolipede",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sm/sm3/58/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-30.webp",
+        "name":  "Excadrill",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sv/sv05/174/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-31.png",
+        "name":  "Blaine\u0027s Vulpix",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/gym2/66_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-32.png",
+        "name":  "Regigigas",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/dp7/9_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-33.webp",
+        "name":  "Tornadus",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sv/sv07/120/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-34.png",
+        "name":  "Zygarde",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sm75/49_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-35.webp",
+        "name":  "Fan Rotom",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sv/sv07/118/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-36.png",
+        "name":  "Ekans",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sm115/25_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-37.webp",
+        "name":  "Gardevoir",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/pl/pl1/8/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-38.png",
+        "name":  "Oshawott",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/bw11/37_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-39.webp",
+        "name":  "Electrocharger",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sm/sm9/139/high.webp"
+    },
+    {
+        "file":  "assets/rail/card-40.png",
+        "name":  "Regirock",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/ex13/28_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-41.png",
+        "name":  "Swampert-EX",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/xyp/XY55_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-42.png",
+        "name":  "Salazzle",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sm11/99_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-43.png",
+        "name":  "Wally\u0027s Training",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/ex2/89_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-44.png",
+        "name":  "Rainbow Energy",
+        "kind":  "card",
+        "source":  "https://images.pokemontcg.io/sm1/137_hires.png"
+    },
+    {
+        "file":  "assets/rail/card-45.webp",
+        "name":  "Claydol",
+        "kind":  "card",
+        "source":  "https://assets.tcgdex.net/en/sm/sm7/79/high.webp"
+    }
+]
