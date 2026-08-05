@@ -93,10 +93,16 @@
     border-radius: 999px;
     font-weight: 600;
   }
-  .brand-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent);
+  .brand img {
+    display: block;
+    width: min(280px, 72vw);
+    height: auto;
+    object-fit: contain;
+  }
+  .brand-label {
+    color: var(--muted);
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
   h1 {
     font-size: 42px;
@@ -178,7 +184,7 @@
 <div class="wrap">
 
 <header class="hero">
-  <span class="brand"><span class="brand-dot"></span>PokeMarkt Extension</span>
+  <span class="brand"><img src="/assets/Main-Logo.png" alt="PokeMarkt"><span class="brand-label">Extension</span></span>
   <h1>Privacy Policy</h1>
   <p class="updated">Last updated: April 20, 2026</p>
 </header>
