@@ -1,3 +1,13 @@
+<!-- repo-branding:start -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-horizontal-light.png">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/logo-horizontal.png">
+    <img src=".github/assets/logo-horizontal.png" alt="PokeMarkt" width="720">
+  </picture>
+</p>
+<!-- repo-branding:end -->
+
 # PokeMarkt — Website
 
 Public website for the **PokeMarkt** Chrome/Firefox extension, served via GitHub Pages on a custom domain.
